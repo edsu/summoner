@@ -5,16 +5,7 @@ summoner
 
 Work with the [Serial Solutions Summon API](http://api.summon.serialssolutions.com/) from Python.
 
-```python
-
-from summoner import Summon
-
-s = Summon(summon_id, summon_secret_key)
-
-for doc in s.search("World Wide Web"):
-  print doc.title
-
-```
+Documentation will be coming soon, but for now have a look at the unit tests.
 
 Develop
 -------
