@@ -2,6 +2,8 @@ python:
 - "2.7"
 language: python
 env: 
+  # encrypted SUMMON_APP_ID and SUMMON_SECRET_KEY
+  # http://docs.travis-ci.com/user/encryption-keys/
   global: 
   - secure: LBQAkoSS2IPNP9xxM+4QdF5ZniBJO6PZ0BdybHhRp8BqyGUB4P1Lm+1ccqZ8PkQbeXVUAYhgpOH06C1Yx8cFG6psE8T6Z/LaR/5Zt4g+HFRKM4i5UR+vvcOtTRrVzn41LW7L2oyYfjDvR9ugwJqtfhypQO+2IoCxWAXalWOMqTo=
   - secure: PLLL2JhlUQWDGRSrcDfK6Zab+D+P9jTfI0K5QxKh4+xvE1JqDXRhFHsBX2FxYw/NbQIrwNLpoUgQXTbb5U67vPQbbJUM1rxGx3GVIYGckxQDnqV+QKc6sx1nE+DcQIkDYSclLr5MDadqbERxPchydL2uYmQPtQ48/lzf8qY/Ko0=

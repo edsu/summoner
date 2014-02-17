@@ -1,7 +1,7 @@
 summoner
 ========
 
-
+[![Build Status](https://secure.travis-ci.org/edsu/summoner.png)](http://travis-ci.org/edsu/summoner)
 
 Work with the [Serial Solutions Summon API](http://api.summon.serialssolutions.com/) from Python.
 
