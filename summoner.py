@@ -24,7 +24,13 @@ class Summon():
     def search(self, q, **kwargs):
         """
         You can pass in any of the Summon Search API parameters 
-        (without the "s." prefix).
+        (without the "s." prefix). For example to remove highlighting:
+
+            result = api.search("Web", hl=False)
+
+        See the Summon API documentation for the full list of possible
+        parameters:
+
         http://api.summon.serialssolutions.com/help/api/search/parameters
         """
         params = {"s.q": q}

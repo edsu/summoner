@@ -14,6 +14,12 @@ def test_search():
     results = s.search('The Bluest Eye')
     assert len(results['documents']) > 0
 
+def test_highlighting():
+    s = Summon(app_id, secret_key)
+    results = s.search('World Wide Web', hl=False)
+    for doc in results['documents']:
+        print doc['Title']
+
 def test_facet():
     s = Summon(app_id, secret_key)
     results = s.search('World Wide Web', ff='SubjectTerms,or')
@@ -25,3 +31,4 @@ def test_multiple_facets():
     results = s.search('World Wide Web', ff=['SubjectTerms,or', 'ContentType,or'])
     assert len(results['documents']) > 1
     assert len(results['facetFields']) == 2
+
