@@ -5,7 +5,16 @@ summoner
 
 Work with the [Serial Solutions Summon API](http://api.summon.serialssolutions.com/) from Python.
 
-As you can see there's not much here yet. Come back soon!
+```python
+
+from summoner import Summon
+
+s = Summon(summon_id, summon_secret_key)
+
+for doc in s.search("World Wide Web"):
+  print doc.title
+
+```
 
 Develop
 -------

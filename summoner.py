@@ -21,8 +21,15 @@ class Summon():
             return r['status']
 
 
-    def search(self, q):
+    def search(self, q, **kwargs):
+        """
+        You can pass in any of the Summon Search API parameters 
+        (without the "s." prefix).
+        http://api.summon.serialssolutions.com/help/api/search/parameters
+        """
         params = {"s.q": q}
+        for k, v in kwargs.items():
+            params["s." + k] = v
         r = self._get("/2.0.0/search", params)
         return r
 
@@ -55,10 +62,13 @@ class Summon():
     def _id_string(self, path, params, headers):
         if len(params) > 0:
             q_parts = []
-            for k, v in sorted(params.items()):
+            for k, vals in params.items():
                 # TODO: urlencode params?
-                # TODO: handle repeatable paramter names?
-                q_parts.append('%s=%s' % (k, unicode(v).encode('utf-8')))
+                if type(vals) != list:
+                    vals = [vals]
+                for v in vals:
+                    q_parts.append('%s=%s' % (k, unicode(v).encode('utf-8')))
+            q_parts.sort()
             qs = '&'.join(q_parts)
         else:
             qs = ""
@@ -72,4 +82,3 @@ class Summon():
         ]
         request_id = ("\n".join(parts)) + "\n"
         return request_id
-
