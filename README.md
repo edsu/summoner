@@ -15,17 +15,14 @@ for doc in results['documents']:
   print doc['Title']
 ```
 
-You can pass in any of the optional
-[parameters](http://api.summon.serialssolutions.com/help/api/search/parameters)
-supported by the Summon API to the search method
-by using the parameter name without the `s.` prefix. So, for example to 
-turn highlighting off:
+You can pass in any of the optional [parameters](http://api.summon.serialssolutions.com/help/api/search/parameters) supported by the Summon API to the search method by using the parameter name without the `s.` prefix. So, for example to 
+turn [highlighting](http://api.summon.serialssolutions.com/help/api/search/parameters/highlight) off:
 
 ```python
 results = summon.search("Web", hl=False)
 ```
 
-Or to facet by subject:
+Or to [facet](http://api.summon.serialssolutions.com/help/api/search/parameters/facet-field) by subject:
 
 ```python
 results = s.search('World Wide Web', ff='SubjectTerms,or')
