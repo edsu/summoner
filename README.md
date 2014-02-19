@@ -15,8 +15,10 @@ for doc in results['documents']:
   print doc['Title']
 ```
 
-You can pass in any of the optional parameters supported by the Summon API
-by using the parameter name without the `s.` prefix. So for example to 
+You can pass in any of the optional
+[parameters](http://api.summon.serialssolutions.com/help/api/search/parameters)
+supported by the Summon API to the search method
+by using the parameter name without the `s.` prefix. So, for example to 
 turn highlighting off:
 
 ```python
