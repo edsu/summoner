@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-This script runs an open ended search of Summon API and tallies up metadata 
+This script runs an open ended search of the Summon API and tallies up metadata 
 fields used by content type. Adjust QUERY and PAGE_LIMIT as needed. You will
 need to have your SUMMON_APP_ID and SUMMON_SECRET_KEY set in your 
 environment.
