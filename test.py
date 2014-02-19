@@ -1,6 +1,12 @@
 import os
+import pytest
 
 from summoner import Summon
+
+"""
+You'll need to set SUMMON_APP_ID and SUMMON_SECRET_KEY in your environment if 
+you want to run these tests.
+"""
 
 app_id = os.environ['SUMMON_APP_ID']
 secret_key = os.environ['SUMMON_SECRET_KEY']
