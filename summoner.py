@@ -10,6 +10,11 @@ USER_AGENT = 'summoner v%s <http://github.com/edsu/summoner>' % VERSION
 class Summon():
 
     def __init__(self, access_id, secret_key):
+        if access_id == None:
+            raise Exception("access_id must not be None")
+        elif secret_key == None:
+            raise Exception("secret_key must not be None")
+
         self.access_id = access_id
         self.secret_key = secret_key
         self.host = 'api.summon.serialssolutions.com'

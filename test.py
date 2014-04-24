@@ -37,3 +37,13 @@ def test_highlighting():
     results = s.search('World Wide Web', hl=False)
     for doc in results['documents']:
         assert '<h>' not in doc['Title']
+
+def test_access_id_none():
+    with pytest.raises(Exception) as e:
+        s = Summon(None, '123')
+    assert e.exconly() == 'Exception: access_id must not be None'
+
+def test_secret_key_none():
+    with pytest.raises(Exception) as e:
+        s = Summon('123', None)
+    assert e.exconly() == 'Exception: secret_key must not be None'
