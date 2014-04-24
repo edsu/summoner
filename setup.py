@@ -15,7 +15,7 @@ class PyTest(Command):
 
 setup(
     name = 'summoner',
-    version = '0.0.2',
+    version = '0.0.3',
     url = 'http://github.com/edsu/summoner',
     author = 'Ed Summers',
     author_email = 'ehs@pobox.com',
