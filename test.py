@@ -42,3 +42,13 @@ def test_unicode():
     s = Summon(app_id, secret_key)
     results = s.search(u'\u6751\u4e0a\u6625\u6a39')
     assert len(results['documents']) > 1
+
+def test_access_id_none():
+    with pytest.raises(Exception) as e:
+        s = Summon(None, '123')
+    assert e.exconly() == 'Exception: access_id must not be None'
+
+def test_secret_key_none():
+    with pytest.raises(Exception) as e:
+        s = Summon('123', None)
+    assert e.exconly() == 'Exception: secret_key must not be None'

@@ -1,5 +1,4 @@
 from setuptools import setup, Command
-from summoner import VERSION
 
 class PyTest(Command):
     """
@@ -16,7 +15,7 @@ class PyTest(Command):
 
 setup(
     name = 'summoner',
-    version = VERSION,
+    version = '0.0.4',
     url = 'http://github.com/edsu/summoner',
     author = 'Ed Summers',
     author_email = 'ehs@pobox.com',
