@@ -4,7 +4,7 @@ import hashlib
 import datetime
 import requests
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 USER_AGENT = 'summoner v%s <http://github.com/edsu/summoner>' % VERSION
 
 class Summon():
