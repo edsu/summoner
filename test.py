@@ -37,3 +37,8 @@ def test_highlighting():
     results = s.search('World Wide Web', hl=False)
     for doc in results['documents']:
         assert '<h>' not in doc['Title']
+
+def test_unicode():
+    s = Summon(app_id, secret_key)
+    results = s.search(u'\u6751\u4e0a\u6625\u6a39')
+    assert len(results['documents']) > 1
